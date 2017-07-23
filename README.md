@@ -1,7 +1,7 @@
 # React-Boilerplate
 React boilerplate for personal projects
 
-~Will be updated over the lifetime of many react projects~
+Will be updated over the lifetime of many react projects
 
 ## Installation
 

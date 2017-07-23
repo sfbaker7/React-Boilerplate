@@ -1,21 +1,17 @@
 {
-  "name": "tsunami",
+  "name": "React-Boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --inline --history-api-fallback"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sfbaker7/tsunami.git"
-  },
   "author": "Stuart Baker",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sfbaker7/tsunami/issues"
+    "url": "https://github.com/sfbaker7/React-Boilerplate/issues"
   },
-  "homepage": "https://github.com/sfbaker7/tsunami#readme",
+  "homepage": "https://github.com/sfbaker7/React-Boilerplate#readme",
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
