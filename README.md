@@ -23,3 +23,4 @@ npm run start
 - AirBnb's Linter https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
 - SASS/SCSS
 - Autoprefixer https://github.com/postcss/autoprefixer
+- Hot loader
