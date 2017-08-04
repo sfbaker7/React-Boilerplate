@@ -12,7 +12,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 module.exports = {
   context: __dirname + '/client',
   entry: {
-    javascript: './index.js',
+    app: 'webpack-dev-server/client?http://localhost:8080',
+    javascript: ['./index.js'],
     css: ['./scss/base.scss'],
   },
 
@@ -27,16 +28,6 @@ module.exports = {
 
   module: {
     rules: [{
-      test: /\.scss$/,
-      use: [{
-        loader: 'style-loader',
-      }, {
-        loader: 'css-loader',
-      }, {
-        loader: 'sass-loader',
-      }],
-    },
-    {
       test: /\.jsx?$/,
       use: [{
         loader: 'react-hot-loader',
@@ -46,9 +37,18 @@ module.exports = {
       exclude: /node_modules/,
     },
     {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', 'postcss-loader']
+      test: /\.(css|scss)$/,
+      use: [{
+        loader: 'style-loader',
+      }, {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+        },
+      }, {
+        loader: 'postcss-loader',
+      }],
     }],
   },
-  plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig],
 };
