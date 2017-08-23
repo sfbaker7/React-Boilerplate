@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import WebFont from 'webfontloader';
+
 import App from './components/App';
 
+WebFont.load({
+  google: {
+    families: ['Roboto: 400,400i,700', 'sans-serif'],
+  },
+});
+
+const app = document.getElementById('root');
+
 ReactDOM.render((
-  <HashRouter>
-    <div>
-      <Route exact path='/' component={App} />
-    </div>
-  </HashRouter>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 ),
-  document.getElementById('root')
+app
 );

@@ -18,13 +18,21 @@ module.exports = {
   },
 
   output: {
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    path: __dirname + "/dist",
+  },
+
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    stats: 'errors-only',
   },
 
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
+
+  devtool: 'eval',
 
   module: {
     rules: [{
@@ -48,6 +56,10 @@ module.exports = {
       }, {
         loader: 'postcss-loader',
       }],
+    },
+    {
+      test: /\.(jpe?g|gif|png|svg)$/i,
+      use: 'file-loader?[name].[ext]&outputPath=images/',
     }],
   },
   plugins: [HtmlWebpackPluginConfig],
